@@ -11,7 +11,7 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
       id: randomUUID(),
       user_id: data.user_id,
       gym_id: data.gym_id,
-      validated_at: data.validated_at ? new Date() : null,
+      validated_at: data.validated_at ? new Date(data.validated_at) : null,
       created_at: new Date(),
     }
 
