@@ -20,8 +20,8 @@ describe('Check-in use case', () => {
       title: 'Academia Serjão dos foguetes',
       description: '',
       phone: '',
-      latitude: new Decimal(0),
-      longitude: new Decimal(0),
+      latitude: new Decimal(-20.8336121),
+      longitude: new Decimal(-49.3944832),
     })
 
     // Mock de tempo
@@ -83,5 +83,25 @@ describe('Check-in use case', () => {
     })
 
     expect(checkIn.id).toEqual(expect.any(String))
+  })
+
+  it('should not be able to check in on distant gym', async () => {
+    gymsRepository.items.push({
+      id: 'gym-02',
+      title: 'Academia Serjão dos foguetes',
+      description: '',
+      phone: '',
+      latitude: new Decimal(-20.800319),
+      longitude: new Decimal(-49.345474),
+    })
+
+    await expect(() =>
+      sut.execute({
+        userId: 'user-01',
+        gymId: 'gym-02',
+        userLatitude: -20.8336121,
+        userLongitude: -49.3944832,
+      }),
+    ).rejects.toBeInstanceOf(Error)
   })
 })
