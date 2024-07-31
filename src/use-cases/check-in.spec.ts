@@ -10,18 +10,18 @@ let sut: CheckInUseCase // SUT (system under test) convenção para nomear a ent
 let gymsRepository: InMemoryGymsRepository
 
 describe('Check-in use case', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     checkInsRepository = new InMemoryCheckInsRepository()
     gymsRepository = new InMemoryGymsRepository()
     sut = new CheckInUseCase(checkInsRepository, gymsRepository)
 
-    gymsRepository.items.push({
+    await gymsRepository.create({
       id: 'gym-01',
       title: 'Academia Serjão dos foguetes',
       description: '',
       phone: '',
-      latitude: new Decimal(-20.8336121),
-      longitude: new Decimal(-49.3944832),
+      latitude: -20.8336121,
+      longitude: -49.3944832,
     })
 
     // Mock de tempo
