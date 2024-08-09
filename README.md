@@ -9,6 +9,7 @@
 - Trabalharemos com:
   - Geolocalização (cálculo de distância envolvendo latitude e longitude)
   - Data (entrar na academia até 20 minutos depois do check-in)
+  - RBAC (Role Based Authorization Control) conceito de determinar permissões que o usuário tem baseado em seu cargo
 
 
 # RFs (Requisitos funcionais) => funcionalidades da aplicação, o que será possível o usuário fazer em nossa aplicação
