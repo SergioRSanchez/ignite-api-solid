@@ -10,6 +10,8 @@
   - Geolocalização (cálculo de distância envolvendo latitude e longitude)
   - Data (entrar na academia até 20 minutos depois do check-in)
   - RBAC (Role Based Authorization Control) conceito de determinar permissões que o usuário tem baseado em seu cargo
+  - CI (Continuous Integration) (ENTRADA): rotinas para integração de código contínuo, em projetos reais há um grande fluxo de códigos chegando de diferentes desenvolvedores, portanto é necessário ter alguns fluxos que executam e validam se esses códigos estão chegando da maneira esperada
+  - CD (Continuous Deployment/Delivery) (SAÍDA): quando aprovarmos uma pull request, automaticamente fazer o deploy do projeto
 
 
 # RFs (Requisitos funcionais) => funcionalidades da aplicação, o que será possível o usuário fazer em nossa aplicação
@@ -32,8 +34,8 @@
 - [x] O usuário não pode fazer 2 check-ins no mesmo dia;
 - [x] O usuário não pode fazer check-ins se não estiver perto (100m) da academia;
 - [x] O check-in só pode ser validado até 20 minutos após criado;
-- [ ] O check-in só pode ser validado por administradores;
-- [ ] A academia só pode ser cadastrada por administradores;
+- [x] O check-in só pode ser validado por administradores;
+- [x] A academia só pode ser cadastrada por administradores;
 
 
 # RNFs (Requisitos não funcionais) => não partem do cliente, ele não terá controle a esses requisitos, porém são essenciais para rodar a aplicação e uma boa experiência do usuário
@@ -41,4 +43,4 @@
 - [x] A senha do usuário precisa estar criptografada;
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [x] O usuário deve ser identificado por um JWT (JSON Web Token);
