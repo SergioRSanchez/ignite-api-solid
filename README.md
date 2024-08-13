@@ -7,7 +7,7 @@
 
 
 - Trabalharemos com:
-  - Geolocalização (cálculo de distância envolvendo latitude e longitude)
+  - Geolocalização (cálculo de distância envolvendo latitude e longitude);
   - Data (entrar na academia até 20 minutos depois do check-in)
   - RBAC (Role Based Authorization Control) conceito de determinar permissões que o usuário tem baseado em seu cargo
   - CI (Continuous Integration) (ENTRADA): rotinas para integração de código contínuo, em projetos reais há um grande fluxo de códigos chegando de diferentes desenvolvedores, portanto é necessário ter alguns fluxos que executam e validam se esses códigos estão chegando da maneira esperada
